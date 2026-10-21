@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Coding Club</title>
+</head>
+<body>
+
+<!--
+    - Error 1 (Line 1): Missing standard <!DOCTYPE html> declaration.
+    - Error 2 (Line 1): <html> opening tag is missing the required 'lang="en"' attribute.
+    - Error 3 (Line 3): <title> tag was not closed with a matching </title> tag.
+    - Error 4 (Line 7): Mismatched heading tag levels such as opened with <h1> but closed with </h2>.
+    - Error 5 (Line 8): Improper tag nesting such as opened <strong><em> but closed as </strong></em>.
+    - Error 6 (Line 8): The paragraph element was missing its closing </p> tag.
+    - Error 7 (Line 9): Closing heading tag missing forward slash (<h2 to <h2 instead of </h2>).
+    - Error 8 (Lines 10 & 14): List type mismatch; opened with <ul> but closed with </ol>.
+    - Error 9 (Line 11): The first list item (<li>Weekly coding sessions) lacked a closing </li> tag.
+    - Error 10 (Line 15): <a> href attribute lacked quotation marks and protocol scheme (www.umt.edu.my).
+    - Error 11 (Line 16): <img> element lacked the required "width" attribute for picture size.
+    - Error 12 (Line 17): Raw special characters used; "(c)" must be "&copy;" and "&" must be "&amp;".
+-->
+
+    <!-- Main Header Section -->
+    <header>
+        <h1>Welcome to Campus Coding Club</h1>
+        <p>We meet every <strong><em>Wednesday</em></strong> at Lab 3.</p>
+    </header>
+
+    <!-- Club Activities Section -->
+    <h2>Our Activities</h2>
+    <ul>
+        <li>Weekly coding sessions</li>
+        <li>Hackathon</li>
+        <li>Web design workshop</li>
+    </ul>
+
+    <!-- University Link & Club Image Section -->
+    <h2>About Our Campus</h2>
+    <p>
+        Visit our university: 
+        <a href="https://www.umt.edu.my" target="_blank" rel="noopener noreferrer">UMT Website</a>
+    </p>
+    <p>
+        <img src="codingclub.jpg" alt="Campus Coding Club" width="450">
+    </p>
+
+    <!-- Footer with Validated Character Entities -->
+    <footer>
+        <hr>
+        <p>Copyright &copy; 2026 Campus Coding Club &amp; Friends</p>
+    </footer>
+
+</body>
+</html>
