@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Profile Page</title>
+</head>
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+        <h1>Welcome to My Personal Profile</h1>
+        <p>A simple webpage showcasing personal details and an interactive form.</p>
+    </header>
+
+    <!-- Semantic Navigation -->
+    <nav>
+        <a href="#about">About This Page</a> | 
+        <a href="#details">Personal Information</a> | 
+        <a href="#contact-form">Registration</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section id="about">
+        <!-- Semantic Article: Profile Overview -->
+        <article>
+            <h2>About This Page</h2>
+            <p>This profile page highlights student details and allows visitors to submit their own information.</p>
+        </article>
+
+        <!-- Semantic Article: Personal Information Table -->
+        <article id="details">
+            <h2>Personal Information</h2>
+            <!-- Table with at least 3 rows, 3 columns, headers, and border attribute as shown in notes -->
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Occupation</th>
+                </tr>
+                <tr>
+                    <td>Mithran A/L Balakrishnan</td>
+                    <td>22</td>
+                    <td>Software Engineer</td>
+                </tr>
+                <tr>
+                    <td>Sumitrra A/P Narayanan</td>
+                    <td>22</td>
+                    <td>Cybersecurity Analyst</td>
+                </tr>
+            </table>
+        </article>
+
+        <!-- Semantic Article: Interactive Form -->
+        <article id="contact-form">
+            <h2>User Registration & Survey Form</h2>
+            <form action="submit_form.php" method="post">
+                <!-- Text Input: Name -->
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname"><br><br>
+
+                <!-- Text Input: Email -->
+                <label for="useremail">Email Address:</label><br>
+                <input type="email" id="useremail" name="useremail"><br><br>
+
+                <!-- Radio Buttons: Gender -->
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+
+                <!-- Checkboxes: Favorite Hobbies -->
+                <label>Select your favorite hobbies:</label><br>
+                <input type="checkbox" id="hobby1" name="hobby1" value="Reading">
+                <label for="hobby1">Reading</label><br>
+                <input type="checkbox" id="hobby2" name="hobby2" value="Gaming">
+                <label for="hobby2">Gaming</label><br>
+                <input type="checkbox" id="hobby3" name="hobby3" value="Coding">
+                <label for="hobby3">Coding</label><br><br>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </section>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <p>Copyright &copy; 2026 My Web Page</p>
+    </footer>
+
+</body>
+</html>
