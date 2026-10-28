@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeLab Programming Workshop 2026</title>
+</head>
+<body>
+
+    <!--HEADER SECTION-->
+    <header>
+        <h1>CodeLab Programming Workshop 2026</h1>
+        <p>Empowering students through modern software development and hands-on coding skills.</p>
+    </header>
+
+    <!--NAVIGATION BAR-->
+    <nav>
+        <a href="#about">About the Event</a> | 
+        <a href="#schedule">Event Schedule</a> | 
+        <a href="#register">Registration</a>
+    </nav>
+
+    <!--SECTION 1: ABOUT THE EVENT-->
+    <section id="about">
+        <h2>About the Event</h2>
+        
+        <!-- Article 1: Introducing a Keynote Speaker -->
+        <article>
+            <h3>Honorable Speaker: Ts. Dr. Ily Amalina Ahmad Sabri</h3>
+            <p>Ts. Dr. Ily Amalina Ahmad Sabri is a Senior Systems Architect who will share real-world insights on industry software engineering practices and career pathways for undergraduate students.</p>
+        </article>
+
+        <!-- Article 2: Introducing a Workshop Activity -->
+        <article>
+            <h3>Hands-on Sessions: Web Architecture Challenge</h3>
+            <p>Students will collaborate in teams to build accessible web interfaces and learn web standards using hands-on debugging exercises.</p>
+        </article>
+    </section>
+
+    <!--SECTION 2: EVENT SCHEDULE-->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        
+        <!-- Schedule Table with headers, colspan, and rowspan -->
+        <table border="1">
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Venue</th>
+                <th>Person in Charge</th>
+            </tr>
+            <!-- Row 1: Morning Check-in -->
+            <tr>
+                <td>08:30 AM - 09:00 AM</td>
+                <td>Student Registration &amp; Breakfast</td>
+                <td>Foyer Block A</td>
+                <td>Committee Members</td>
+            </tr>
+            <!-- Row 2: Opening -->
+            <tr>
+                <td>09:00 AM - 10:30 AM</td>
+                <td>Talk on Future of Software Engineering</td>
+                <td>Auditorium 1</td>
+                <td>Dr. Ily Amalina</td>
+            </tr>
+            <!-- Row 3: Session 1 with rowspan spanning consecutive sessions in the same venue -->
+            <tr>
+                <td>10:30 AM - 12:00 PM</td>
+                <td>Hands-on Sessions: Web Architecture Challenge</td>
+                <td rowspan="2">MP2</td>
+                <td>Mr. Mithran Balakrishnan</td>
+            </tr>
+            <!-- Row 4: Session 2 sharing Computer Lab 3 via rowspan above -->
+            <tr>
+                <td>12:00 PM - 01:00 PM</td>
+                <td>Interactive Code Review &amp; Debugging</td>
+                <td>Mr. Dines Jagathisan</td>
+            </tr>
+            <!-- Row 5: Lunch break using colspan spanning Activity, Venue, and Person in Charge -->
+            <tr>
+                <td>01:00 PM - 02:00 PM</td>
+                <td colspan="3">Lunch Break &amp; Networking Session</td>
+            </tr>
+            <!-- Row 6: Afternoon Challenge -->
+            <tr>
+                <td>02:00 PM - 04:30 PM</td>
+                <td>Hackathon: Rapid Web Interface Challenge</td>
+                <td>Dewan Persidangan 3</td>
+                <td>Wong Shu Hong</td>
+            </tr>
+            <!-- Row 7: Closing & Award Ceremony -->
+            <tr>
+                <td>04:30 PM - 05:30 PM</td>
+                <td>Project Showcase &amp; Prize Presentation</td>
+                <td>Auditorium 1</td>
+                <td>Faculty Dean</td>
+            </tr>
+        </table>
+    </section>
+
+    <!--SECTION 3: REGISTRATION -->
+    <section id="register">
+        <h2>Registration</h2>
+        
+        <form action="register.html" method="post">
+            
+            <!-- Text Input: Full Name -->
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"><br><br>
+
+            <!-- Text Input: Matric Number -->
+            <label for="matric">Matric Number:</label><br>
+            <input type="text" id="matric" name="matric"><br><br>
+
+            <!-- Text Input: E-mail -->
+            <label for="email">E-mail Address:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!-- Radio Buttons: Year of Study-->
+            <label>Year of Study:</label><br>
+            <input type="radio" id="year1" name="year" value="Year 1">
+            <label for="year1">Year 1</label><br>
+            
+            <input type="radio" id="year2" name="year" value="Year 2">
+            <label for="year2">Year 2</label><br>
+            
+            <input type="radio" id="year3" name="year" value="Year 3">
+            <label for="year3">Year 3</label><br>
+            
+            <input type="radio" id="year4" name="year" value="Year 4">
+            <label for="year4">Year 4</label><br><br>
+
+            <!-- Checkboxes: Sessions to Join (At least 3 choices) -->
+            <label>Select Sessions to Join:</label><br>
+            <input type="checkbox" id="session1" name="sessions" value="Keynote">
+            <label for="session1">Talk on Future of Software Engineering</label><br>
+            
+            <input type="checkbox" id="session2" name="sessions" value="Hands-on">
+            <label for="session2">Hands-on Sessions: Web Architecture Challenge</label><br>
+
+            <input type="checkbox" id="session3" name="sessions" value="Hands-on">
+            <label for="session3">Interactive Code Review &amp; Debugging</label><br>
+            
+            <input type="checkbox" id="session4" name="sessions" value="Hackathon">
+            <label for="session4">Hackathon: Rapid Web Interface Challenge</label><br><br>
+
+            <!-- Drop-down List: Programme / Faculty (At least 4 options) -->
+            <label for="programme">Programme:</label><br>
+            <select id="programme" name="programme">
+                <option value="se">Bachelor of Computer Science (Software Engineering)</option>
+                <option value="im">Bachelor of Computer Science (Informatik Maritim)</option>
+                <option value="it">Bachelor of Information Technology</option>
+                <option value="mc">Bachelor of Computer Science (Mobile Computing)</option>
+            </select><br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+            
+        </form>
+    </section>
+
+    <!--FOOTER SECTION-->
+    <footer>
+        <p>Organised by: Faculty of Computer Science and Mathematics</p>
+        <p>Copyright &copy; 2026 Faculty Event Organisers.</p>
+    </footer>
+
+</body>
+</html>
