@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+    <!-- 
+    Error 1 (Line 1): Incomplete doctype declaration `<!DOCTYPE>` changed to `<!DOCTYPE html>`.
+    Error 2 (Line 9): Improper nesting and tags `<h1>e-Ticket <span>Your Campus Cinema</h1></span>` changed to `<h1>e-Ticket <span>Your Campus Cinema</span></h1>`.
+    Error 3 (Line 11 & Line 36): Invalid block wrapper `<span id="content">` changed to `<div id="content">` because a `span` (inline) cannot contain block elements (`h2`, `p`, `form`).
+    Error 4 (Line 13): Unescaped character `<` in text content changed to `&lt;`.
+    Error 5 (Line 14): String concatenation in `oninput` (`adult.value + child.value` resulting in "23") corrected to numeric conversion `parseInt(adult.value || 0) + parseInt(child.value || 0)`.
+    Error 6 (Line 18): Misspelled input type `type="emial"` changed to `type="email"`.
+    Error 7 (Line 22 & Line 23): Datalist mismatch where `list="movies"` did not match `id="movielist"`. Fixed by setting `list="movielist"`.
+    Error 8 (Line 32): Inverted range values `min="5" max="1"` corrected to `min="1" max="5"`.
+    Error 9 (Line 33): Invalid `for` attribute tokens in `<output for="adult kid">` changed to matching IDs `for="adult child"`.
+    Error 10 (Line 38): Case-sensitive entity typo `&Copy;` changed to `&copy;`.
+    Error 11 (Line 41): Stray/duplicate characters `54 </body>` removed.
+    -->
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: Tickets &lt; RM10 for students &amp; staff!</p>
+
+        <!-- Booking Form with dynamic calculation for ticket total and price -->
+        <form action="booking.php" oninput="
+            total.value = parseInt(adult.value || 0) + parseInt(child.value || 0);
+            price.value = (parseInt(adult.value || 0) * 12) + (parseInt(child.value || 0) * 8);">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="012-3456789" required><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="date">Show date:</label>
+            <input type="date" id="date" name="date"><br>
+
+            <label for="time">Show time:</label>
+            <input type="time" id="time" name="time"><br>
+
+            <label for="movie">Movie:</label>
+            <input id="movie" name="movie" list="movielist"><br>
+            <datalist id="movielist">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="Godzilla vs Kong">
+            </datalist>
+
+            <label for="adult">Adult tickets (RM12):</label>
+            <input type="number" id="adult" name="adult" value="0" min="0"><br>
+
+            <label for="child">Child tickets (RM8):</label>
+            <input type="number" id="child" name="child" value="0" min="0"><br>
+
+            <label for="rating">Rate our service:</label>
+            <input type="range" id="rating" name="rating" min="1" max="5"><br>
+
+            Total tickets: <output name="total" id="total" for="adult child">0</output><br>
+            Total price (RM): <output name="price" id="price" for="adult child">0</output><br>
+
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+
+    <!-- Sidebar Section: Now Showing -->
+    <div id="sidebar">
+        <h3>Now Showing</h3>
+        <ul>
+            <li>
+                <strong>Space Rangers</strong> - 
+                <span>PG-13</span> 
+                (<a href="https://youtu.be/2NAjr2V9FU8?si=HgMjJgOI8HYGTrU5" target="_blank">Watch Trailer</a>)
+            </li>
+            <li>
+                <strong>Kampung Comedy</strong> - 
+                <span>U</span> 
+                (<a href="https://youtu.be/tlI4ByX7KX4?si=VPnd4D2oNyUg8iJR" target="_blank">Watch Trailer</a>)
+            </li>
+            <li>
+                <strong>Godzilla vs Kong</strong> - 
+                <span>18</span> 
+                (<a href="https://youtu.be/odM92ap8_c0?si=hmkEK-lfVXBqUwvo" target="_blank">Watch Trailer</a>)
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+        <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday &amp; Thursday</p>
+    </div>
+</body>
+</html>

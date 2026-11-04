@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leo Bakery - Online Order</title>
+</head>
+<body>
+
+    <!--Header Section-->
+    <div id="header">
+        <h1>Leo Bakery&reg; <span>- Freshly Baked Every Day!</span></h1>
+    </div>
+
+    <!--Navigation Section-->
+    <div id="nav">
+        <a href="#content">Order Now</a> | 
+        <a href="#sidebar">Price List</a> | 
+        <a href="#footer">Contact Us</a>
+    </div>
+
+    <!--Content Section-->
+    <div id="content">
+        <h2>Welcome to Leo Bakery</h2>
+        <p>
+            Welcome to the <strong>official bakery</strong> of the campus. 
+            Enjoy <em>warm and delicious</em> treats crafted with passion. 
+            Check our <a href="#sidebar">price list</a> or customize your pastry with a special 
+            <span>frosting choice</span> below!
+        </p>
+
+    <!--Sidebar (Price List & Entity Usage)-->
+    <div id="sidebar">
+        <h2>Special Price List</h2>
+        <ul>
+            <li>Cupcake: RM&nbsp;3.00 each</li>
+            <li>Cake Slice: RM&nbsp;5.00 each</li>
+            <li>Promotion: Orders &gt; 10 pieces get a free drink!</li>
+            <li>Campus Special:&nbsp; 10% off on Fridays</li>
+        </ul>
+    </div>
+
+        <!--Order Form Section-->
+        <div>
+            <h2>Place Your Order</h2>
+           <form oninput="total.value = (parseInt(cupcakes.value) || 0) * 3 + (parseInt(cakes.value) || 0) * 5">
+                
+                <!-- Customer Details -->
+                <label for="cname">Customer Name:</label><br>
+                <input type="text" id="cname" name="cname" placeholder="Enter Full Name" required autofocus><br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <!-- Order Schedule -->
+                <label for="pick_date">Pick-up Date:</label><br>
+                <input type="date" id="pick_date" name="pick_date" ><br><br>
+
+                <label for="pick_time">Pick-up Time:</label><br>
+                <input type="time" id="pick_time" name="pick_time" ><br><br>
+
+                <!-- Customization Options -->
+                <label for="flavour">Flavour:</label><br>
+                <input list="flavour-options" id="flavour" name="flavour" >
+                <datalist id="flavour-options">
+                    <option value="Rich Chocolate">
+                    <option value="Caramel Vanilla">
+                    <option value="Red Velvet">
+                    <option value="Biscoff Cheese">
+                </datalist><br><br>
+
+                <label for="icing_color">Icing Colour:</label><br>
+                <input type="color" id="icing_color" name="icing_color"><br><br>
+
+                <label for="sweetness">Sweetness Level (1 = Low | 5 = High):</label><br>
+                <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1"><br>
+
+                <!-- Pricing & Quantity -->
+                <h3>Select Quantities</h3>
+                <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+                <input type="number" id="cupcakes" name="cupcakes" min="0" value="0"><br><br>
+
+                <label for="cakes">Cake Slices (RM 5.00 each):</label>
+                <input type="number" id="cakes" name="cakes" min="0" value="0"><br><br>
+
+                <!-- Calculation Output -->
+                <strong>Total Price (RM): </strong>
+                <output name="total" for="cupcakes cakes">0</output><br><br>
+
+                <input type="submit" value="Submit Order">
+            </form>
+        </div>
+    </div>
+
+    <!--Footer Section-->
+    <div id="footer">
+        <p>&copy; 2026 LeoBakery&reg;. All rights reserved.</p>
+    </div>
+
+    <!-- Testing:
+    1. Submit with all fields empty: The browser blocks submission and displays a reminder on the "Customer Name" field saying "Please fill out this field" due to the 'required' and 'autofocus' attributes.
+    2. Submit with "myemail" in the e-mail field: The browser blocks submission and displays an error message such as "Please include an '@' in the email address. 'myemail' is missing an '@'" because type="email" shows standard email syntax.
+    -->
+
+</body>
+</html>
