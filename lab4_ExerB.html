@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-Café Campus</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="cafe.css">
+  <!-- Internal CSS styles -->
+  <style>
+    a:link { color: #1A5276; }
+    a:visited { color: #7D3C98; }
+    a:hover { color: #E67E22; }
+    a:active { color: #C0392B; }
+
+    h1 { text-decoration: overline; }
+    p { color: #333333; text-align: justify; }
+
+    .intro {
+      font-size: 18px;
+      background-color: #FDEBD0;
+      padding: 10px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #C0392B;
+    }
+  </style>
+</head>
+<body>
+  <!-- Error 1 (Line 7): HTML comment used inside <style> instead of CSS comment /* ... */ -->
+  <!-- Error 2 (Line 9): Invalid value 'list-style-type: no;' instead of 'list-style-type: none;' -->
+  <!-- Error 3 (Lines 14-15): Wrong link state order (a:hover placed before a:visited); corrected to link -> visited -> hover -> active -->
+  <!-- Error 4 (Line 17): Invalid value 'text-decoration: overlined;' instead of 'text-decoration: overline;' -->
+  <!-- Error 5 (Line 18): Missing colon in 'color #333333;' instead of 'color: #333333;' -->
+  <!-- Error 6 (Line 21): Missing closing brace '}' for the #intro rule -->
+  <!-- Error 7 (Line 22): Missing dot '.' for class selector 'highlight' instead of '.highlight' -->
+  <!-- Error 8 (Line 34): Missing '#' in href="menu" instead of href="#menu" -->
+  <!-- Error 9 (Lines 37-41): Misplaced <h2> and <p class="intro"> tags split across </nav> and <section id="menu"> -->
+  <!-- Error 10 (Line 41): Selector mismatch between class="intro" in HTML and #intro in CSS -->
+  <!-- Error 11 (Lines 42-46): Stray </article> tag on line 42 and duplicate id="item" on multiple <article> elements -->
+  <!-- Error 12 (Lines 53-54): <video> missing 'controls' attribute and <source> using type="mp4" instead of type="video/mp4" -->
+
+  <!-- Page Header -->
+  <header>
+    <h1>e-Café Campus</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Today's Menu</h2>
+    <p class="intro">Freshly brewed coffee and local delights every day.</p>
+
+    <article class="item">
+      <h3>Kopi Tarik</h3>
+      <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+    </article>
+
+    <article class="item">
+      <h3>Nasi Lemak</h3>
+      <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+    </article>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video">
+    <h2>Watch Our Story</h2>
+    <figure>
+      <video width="400" height="300" controls>
+        <source src="Cafe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Discover the warm atmosphere and freshly prepared meals at e-Café Campus.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Feedback Form Section -->
+  <section id="feedback">
+    <h2>Customer Feedback</h2>
+    <form class="feedback-form" action="#" method="post">
+      <p>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required>
+      </p>
+
+      <p>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
+
+      <p>
+        Visit Type:<br>
+        <input type="radio" id="dinein" name="visit" value="Dine-in" required>
+        <label for="dinein">Dine-in</label><br>
+        <input type="radio" id="takeaway" name="visit" value="Take-away">
+        <label for="takeaway">Take-away</label>
+      </p>
+
+      <p>
+        Favourite Items:<br>
+        <input type="checkbox" id="kopi" name="favourites" value="Kopi Tarik">
+        <label for="kopi">Kopi Tarik</label><br>
+        <input type="checkbox" id="nasilemak" name="favourites" value="Nasi Lemak">
+        <label for="nasilemak">Nasi Lemak</label><br>
+        <input type="checkbox" id="rotibakar" name="favourites" value="Roti Bakar">
+        <label for="rotibakar">Roti Bakar</label>
+      </p>
+
+      <p>
+        <input type="submit" value="Submit">
+      </p>
+    </form>
+  </section>
+
+  <!-- Page Footer -->
+  <footer id="contact">
+    <p>&copy; 2026 e-Café Campus</p>
+    <address>
+      Email us: <a href="mailto:ecafe@campus.edu.my">ecafe@campus.edu.my</a>
+    </address>
+  </footer>
+</body>
+</html>

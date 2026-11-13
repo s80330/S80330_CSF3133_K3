@@ -1,0 +1,51 @@
+/* Navigation Bar Styles */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1A5276;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  display: inline-block;
+  background-color: #1A5276;
+  color: #FFFFFF;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #E67E22;
+  color: #FFFFFF;
+}
+
+nav ul li a:active {
+  background-color: #C0392B;
+  color: #FFFFFF;
+}
+
+/* Old Price Strike-Through Style */
+.old-price {
+  text-decoration: line-through;
+  color: #7F8C8D;
+}
+
+/* Responsive Video Style */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Feedback Form Style */
+.feedback-form {
+  background-color: #FDEBD0;
+  padding: 15px;
+  border: 1px solid #E67E22;
+  width: 90%;
+}
