@@ -1,0 +1,125 @@
+/* =========================================
+   1. General Body & Typography Styling
+   ========================================= */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("paper.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin: 0;
+    padding: 0;
+    color: #2c2c2c;
+}
+
+/* Heading font using the second Google Font (Merriweather) */
+h1 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Paragraph line-height for readability */
+p {
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. Header Section with Background Image
+   ========================================= */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* =========================================
+   3. Horizontal Navigation Bar Styling
+   ========================================= */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Hover effect for inactive navigation links */
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+/* Active link highlight (green, matching Figure 5.3) */
+nav li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* =========================================
+   4. Main Content Layout
+   ========================================= */
+main {
+    width: 90%;
+    max-width: 960px;
+    margin: 24px auto;
+}
+
+/* =========================================
+   5. Products Table Styling
+   ========================================= */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+#products td,
+#products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Table header: green background, uppercase, centred, 12px top/bottom padding */
+#products th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Right-align the Price column */
+#products td.price-col {
+    text-align: right;
+}
+
+/* =========================================
+   6. Footer Styling
+   ========================================= */
+footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 14px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}

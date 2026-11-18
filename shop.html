@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bookstore</title>
+    <!-- Part 2 (Task 8): Two Google Fonts (Roboto & Merriweather) in a single link tag -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fixed Error 1 (shop.html, Line 7): Changed rel="stylesheets" to rel="stylesheet" -->
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+    <!--
+    ========================================================================
+    PART 1: IDENTIFIED ERRORS IN GIVEN CODE (12 ERRORS FOUND & FIXED)
+    ========================================================================
+    Error 1 (shop.html, Line 7): Typo in rel="stylesheets" prevented shop.css from linking; fixed to rel="stylesheet".
+    Error 2 (shop.html, Line 18): Invalid inline CSS syntax style="color=#1B4F72;" used '=' instead of ':'; fixed to style="color: #1B4F72;"
+    Error 3 (shop.html, Line 20): Table id was id="product" (singular), which did not match #products (plural) in shop.css; fixed to id="products".
+    Error 4 (shop.css, Line 2): Font name 'Robotto' was misspelled; fixed to 'Roboto'.
+    Error 5 (shop.css, Line 4): Invalid value 'no repeat' (missing hyphen) caused the background image to repeat; fixed to 'no-repeat'.
+    Error 6 (shop.css, Line 5): Property 'bacground-position' was misspelled (missing 'k'); fixed to 'background-position'.
+    Error 7 (shop.css, Line 18): 'display: inline;' broke navigation link block padding; fixed to 'display: block;'.
+    Error 8 (shop.css, Line 23): Selector 'li:a:hover' had an invalid colon before 'a'; fixed to 'li a:hover'.
+    Error 9 (shop.css, Line 27): Property value 'collapsed' is invalid for border-collapse (caused double borders); fixed to 'collapse'.
+    Error 10 (shop.css, Line 34): Selector 'tr:nth-child(2)' only styled row 2 instead of all even rows; fixed to 'tr:nth-child(even)'.
+    Error 11 (shop.css, Line 37): Pseudo-class ':hovered' is invalid CSS; fixed to ':hover'.
+    Error 12 (shop.css, Line 45): Missing semicolon ';' after 'background-color: #f1f1f1'; added missing semicolon.
+    ========================================================================
+    -->
+
+    <!-- Part 2 (Task 5): Header with background image and white text -->
+    <header id="home">
+        <h1>Campus Bookstore</h1>
+    </header>
+
+    <!-- Part 2 (Task 5 & 6): Semantic nav and .active class on Home link -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Part 2 (Task 5): Main content wrapper -->
+    <main id="books">
+        <p>Textbooks, stationery and more for every student.</p>
+
+        <table id="products">
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th class="price-col">Price (RM)</th>
+                </tr>
+                <tr>
+                    <td>Web Design Basics</td>
+                    <td>Textbook</td>
+                    <td class="price-col">45.00</td>
+                </tr>
+                <tr>
+                    <td>A4 Notebook</td>
+                    <td>Stationery</td>
+                    <td class="price-col">6.50</td>
+                </tr>
+                <tr>
+                    <td>USB Drive 32GB</td>
+                    <td>Gadget</td>
+                    <td class="price-col">25.00</td>
+                </tr>
+                <tr>
+                    <td>Highlighter Set</td>
+                    <td>Stationery</td>
+                    <td class="price-col">9.90</td>
+                </tr>
+        </table>
+    </main>
+
+    <!-- Part 2 (Task 5 & 9): Styled footer -->
+    <footer id="contact">
+        <p>&copy; 2026 Campus Bookstore</p>
+    </footer>
+
+</body>
+</html>
